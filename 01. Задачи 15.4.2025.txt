@@ -1,0 +1,43 @@
+Задача 1. Добавете нова агенция в таблицата Agency с име NewAgency, от град Sofia, държава BG и телефон на агенцията 0281931221.
+
+INSERT INTO Agency (name, city, country, phone)
+VALUES ('NewAgency', 'Sofia', 'BG', '0281931221');
+
+
+Задача 2. Добавете нова агенция в таблицата Agency с име AgencyNew, от град Sofia и телефон на агенцията 0281931222. За държава на агенцията използвайте стойността по подразбиране.
+
+INSERT INTO Agency (name, city, phone)
+VALUES ('AgencyNew', 'Sofia', '0281931222');
+-- Тук се предполага, че колоната `country` има стойност по подразбиране
+
+
+Задача 3. Добавете нова агенция в таблицата Agency с име AgencyNovel, от град Paris и телефон на агенцията 0481931225. За държава на агенцията въведете NULL.
+
+INSERT INTO Agency (name, city, country, phone)
+VALUES ('AgencyNovel', 'Paris', NULL, '0481931225');
+
+
+Задача 4. Добавете нов клиент в таблицата Client с ЕГН 7702031111, име Ivan Ivanov, телефон 022121232 и e-mail ivanov@mymail.bg
+
+Задача 5. Променете e-mail адреса на клиента с ЕГН 7702031111, на ivan@mymail.bg
+
+UPDATE Client
+SET email = 'ivan@mymail.bg'
+WHERE egn = '7702031111';
+
+
+Задача 6. Променете държавата на агенцията с име AgencyNovel на 'FR'.
+
+Задача 7. Променете телефона на агенцията с име AgencyNew на 0888112233.
+
+Задача 8. Изтрийте агенцията AgencyNovel.
+
+DELETE FROM Agency
+WHERE name = 'AgencyNovel';
+
+
+Задача 9. Изтрийте клиента с ЕГН 7702031111.
+
+Задача 10. Изтрийте всички редове от таблицата Agency.
+
+DELETE FROM Agency;
